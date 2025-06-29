@@ -1,0 +1,47 @@
+:root {
+  /* — COLORS — */
+  --color-primary: #0056b3;
+  --color-secondary: #007bff;
+  --color-accent: #343a40;
+  --color-light: #f8f9fa;
+  --color-white: #ffffff;
+  --color-text-dark: #212529;
+  --color-border: #dee2e6;
+
+  /* — TYPOGRAPHY — */
+  --font-family-base: "Inter", sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.6;
+
+  --h1-font-size: 56px;
+  --h2-font-size: 40px;
+  --h3-font-size: 28.8px;
+  --h4-font-size: 22.4px;
+
+  /* — SPACING — */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 48px;
+  --spacing-xxl: 80px;
+
+  /* — BORDER RADIUS (PX) — */
+  --border-radius-sm: 4px;
+  --border_radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-xxl: 20px;
+  --border-radius-max: 40px;
+  --border-radius-circle: 50%;
+
+  /* — Z‑INDEX — */
+  --z-header: 1000;
+  --z-overlay: 900;
+  --z-hero-content: 500;
+  --z-slideshow-nav: 600;
+
+  /* — TRANSITIONS — */
+  --transition-speed: 0.3s;
+  --transition-ease: ease-in-out;
+}
