@@ -1,0 +1,98 @@
+// scss/_footer.scss
+
+.site-footer {
+    background-color: $color-accent; // Dark background for footer
+    color: $color-white;
+    padding: $spacing-xxl 0 $spacing-md; // Top, bottom, and bottom bar padding
+
+    .footer-top {
+        @extend .container; // Use global container
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // Responsive columns
+        gap: $spacing-xl; // Space between columns
+        margin-bottom: $spacing-xl; // Space above the bottom bar
+        padding-bottom: $spacing-xl;
+        border-bottom: 1px solid rgba($color-white, 0.1); // Subtle separator
+    }
+
+    .footer-column {
+        h4 {
+            font-size: 1.2em;
+            color: $color-white;
+            margin-bottom: $spacing-md;
+            white-space: nowrap; // Keep titles on one line
+        }
+
+        p, li {
+            font-size: 0.95em;
+            line-height: 1.8;
+            color: rgba($color-white, 0.8); // Slightly transparent white text
+            margin-bottom: $spacing-xs;
+
+            a {
+                color: rgba($color-white, 0.8);
+                &:hover {
+                    color: $color-secondary;
+                }
+            }
+        }
+
+        ul {
+            list-style: none;
+            li {
+                margin-bottom: $spacing-xs;
+            }
+        }
+    }
+
+ 
+    .links, .notices {
+        ul {
+            padding-left: 0;
+        }
+    }
+
+    .social {
+        .social-icons {
+            display: flex;
+            gap: $spacing-sm;
+            margin-bottom: $spacing-lg;
+
+            a {
+                font-size: 1.8em; // Size of the icons
+                color: $color-white;
+                transition: color $transition-speed $transition-ease;
+
+                &:hover {
+                    color: $color-secondary;
+                }
+                // Placeholder styles for actual icons (e.g., if using Font Awesome)
+                // If using SVG, style the SVG directly or wrap in a div
+            }
+        }
+
+        .footer-logo {
+            margin-top: $spacing-lg;
+            img {
+                max-width: 120px; // Adjust logo size
+                height: auto;
+                margin-bottom: $spacing-sm;
+                filter: brightness(0) invert(1); // Assuming your SVG is black on transparent for white use
+            }
+            p {
+                font-size: 0.85em;
+                color: rgba($color-white, 0.6);
+            }
+        }
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: $spacing-md; // Space above copyright
+        border-top: 1px solid rgba($color-white, 0.05); // Very subtle line
+        p {
+            font-size: 0.85em;
+            color: rgba($color-white, 0.7);
+        }
+    }
+}

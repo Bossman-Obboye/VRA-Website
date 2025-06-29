@@ -1,0 +1,138 @@
+
+.hero-section {
+    position: relative;
+    height: 100vh; // Full viewport height
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; // Crucial to hide parts of images outside bounds
+    background-color: $color-text-dark; // Fallback background color
+}
+
+.slideshow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; // Below the overlay and content
+}
+
+.hero_slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; // Hidden by default, JS will manage active slide
+    transition: opacity 1.5s ease-in-out; // Smooth fade transition
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex; // To ensure image fills container
+    align-items: center; // Vertically align image within slide
+    justify-content: center; // Horizontally align image within slide
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; // Cover the entire space
+    }
+
+    &.fade {
+        /* This class will be managed by JS */
+        opacity: 1; // Only active slide has opacity 1
+        z-index: 2; // Active slide on top
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color-text-dark, 0.6); // Semi-transparent dark overlay
+    z-index: 10; // Above slideshow, below header and hero content
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; // For vertical alignment of header and content
+}
+
+.hero_content_nav_arrow {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 $spacing-md;
+    z-index: $z-index-slideshow-nav; // Above overlay
+
+    .prev, .next {
+        cursor: pointer;
+        color: $color-white;
+        font-weight: bold;
+        font-size: 2.5em;
+        padding: $spacing-md;
+        transition: color $transition-speed $transition-ease;
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+}
+
+
+.hero-content {
+    position: relative; // Allow positioning for individual content blocks
+    text-align: center;
+    color: $color-white;
+    max-width: 900px;
+    z-index: $z-index-hero-content; // Above overlay
+    padding-top: $spacing-xxl; // Push content down to account for fixed header
+    padding-bottom: $spacing-xl; // Padding for dots/arrows
+
+    // Individual content blocks for the slider (must be managed by JS to show/hide)
+    .content_1, .content_2, .content_3 {
+        display: none; // Hidden by default
+        animation: fadeIn 1.5s $transition-ease; // Fade in content when active
+    }
+
+    // Active content block
+    &.active-content { // Add this class to .hero-content when content is active (via JS)
+        .content_1, .content_2, .content_3 {
+            display: block; // Or 'flex' if internal content has layout
+        }
+    }
+
+
+    h1 {
+        font-size: $h1-font-size;
+        color: $color-white; // White heading on dark overlay
+        margin-bottom: $spacing-md;
+    }
+
+    p {
+        font-size: 1.3em;
+        line-height: $line-height-base;
+        margin-bottom: $spacing-lg;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        color: rgba($color-white, 0.9); // Slightly transparent white
+    }
+
+    .btn {
+        margin-top: $spacing-lg;
+    }
+}
+
+// Fade in animation for hero content
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+// Ensure the header doesn't cover the hero content if the hero is shorter than 100vh
+/* For responsiveness later, might need to adjust padding-top on .hero-content based on header height */

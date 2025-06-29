@@ -1,0 +1,44 @@
+
+// --- Colors ---
+$color-primary: #0056b3; // A strong blue for primary elements (like VRA's brand blue)
+$color-secondary: #007bff; // A slightly different blue for secondary actions/accents
+$color-accent: #343a40; // Dark grey for general text, headings
+$color-light: #f8f9fa; // Light background for sections
+$color-white: #ffffff;
+$color-text-dark: #212529; // Very dark text
+$color-border: #dee2e6; // Light border color
+
+// --- Typography ---
+$font-family-base: 'Inter', sans-serif;
+$font-size-base: 1em; // 16px
+$line-height-base: 1.6;
+
+// Headings
+$h1-font-size: 3.5em; // 56px
+$h2-font-size: 2.5em; // 40px
+$h3-font-size: 1.8em; // 28.8px
+$h4-font-size: 1.4em; // 22.4px
+
+// --- Spacing ---
+$spacing-xs: 0.25rem; // 4px
+$spacing-sm: 0.5rem;  // 8px
+$spacing-md: 1rem;    // 16px
+$spacing-lg: 1.5rem;  // 24px
+$spacing-xl: 3rem;    // 48px
+$spacing-xxl: 5rem;   // 80px
+
+// --- Border Radius ---
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$border-radius-full: 50%;
+
+// --- Z-index ---
+$z-index-header: 1000;
+$z-index-overlay: 900;
+$z-index-hero-content: 500;
+$z-index-slideshow-nav: 600;
+
+// --- Transitions ---
+$transition-speed: 0.3s;
+$transition-ease: ease-in-out;

@@ -1,0 +1,156 @@
+// scss/_responsive.scss
+
+// General responsiveness - will refine based on specific section needs
+@include media-breakpoint-down($breakpoint-lg) { // Up to 1024px
+    .container {
+        padding: 0 $spacing-lg; // Slightly less padding on larger tablets
+    }
+
+    // Header adjustments
+    .home-header {
+        .main-nav {
+            .nav-items {
+                gap: $spacing-lg; // Reduce space between nav items
+            }
+        }
+    }
+
+    // Hero adjustments
+    .hero-section {
+        height: 80vh; // Reduce height on larger tablets
+    }
+    .hero-content {
+        h1 { font-size: 2.8em; } // Smaller heading
+        p { font-size: 1.1em; } // Smaller paragraph
+    }
+
+    // Section titles
+    .section-title {
+        font-size: 2em;
+    }
+
+    // Intro section
+    .intro-section {
+        padding: $spacing-xl 0;
+    }
+    .intro-text h2 {
+        font-size: 2em;
+    }
+    .intro-text p {
+        font-size: 1em;
+    }
+}
+
+
+@include media-breakpoint-down($breakpoint-md) { // Up to 768px (tablets, large phones)
+    .container {
+        padding: 0 $spacing-md; // Default padding
+    }
+
+    // Header: Mobile Menu toggle logic here
+    .home-header {
+        .nav-container {
+            flex-wrap: nowrap; // Prevent immediate wrapping
+        }
+        .main-nav {
+            // This is where you'd hide the nav and show/toggle with JS
+            display: none; // Hidden by default on mobile
+            position: absolute;
+            top: 100%; // Below the header bar
+            left: 0;
+            width: 100%;
+            background-color: rgba($color-primary, 0.95); // Background when menu is open
+            flex-direction: column;
+            text-align: center;
+            &.active { // Class added by JS when menu is open
+                display: flex;
+            }
+            .nav-items {
+                flex-direction: column;
+                gap: $spacing-sm; // Closer items
+                li {
+                    width: 100%;
+                    a {
+                        padding: $spacing-sm $spacing-md;
+                        &:hover {
+                            background-color: rgba($color-secondary, 0.2);
+                        }
+                    }
+                }
+            }
+        }
+        // You'll need to add a hamburger menu icon here, hidden by default on desktop
+        // and visible on mobile to toggle .main-nav.active
+    }
+
+
+    // Hero section
+    .hero-section {
+        height: 70vh; // Reduce height further
+    }
+    .hero-content {
+        padding-top: $spacing-lg; // Adjust for smaller header
+        h1 { font-size: 2.2em; }
+        p { font-size: 1em; }
+        .btn {
+            padding: $spacing-sm $spacing-md;
+            font-size: 0.9em;
+        }
+    }
+
+    // Intro section
+    .intro-section {
+        .mission-box {
+            padding: $spacing-md; // Smaller padding for mission box
+        }
+    }
+
+    // Offerings section
+    .intro-section .offer-cards {
+        grid-template-columns: 1fr; // Stack cards vertically
+    }
+
+    // CSR section
+    .csr-section {
+        padding: $spacing-xl 0;
+    }
+
+    // News section
+    .news-updates-section {
+        padding: $spacing-xl 0;
+        .news-grid {
+            grid-template-columns: 1fr; // Stack news cards vertically
+        }
+        .news-card .card-image {
+            height: 180px; // Adjust image height
+        }
+    }
+
+    // Footer
+    .site-footer .footer-top {
+        grid-template-columns: 1fr; // Stack footer columns
+        text-align: center; // Center footer column content
+        .social-icons {
+            justify-content: center; // Center social icons
+        }
+        .footer-logo {
+            img { margin-left: auto; margin-right: auto; } // Center logo
+        }
+    }
+}
+
+@include media-breakpoint-down($breakpoint-sm) { // Up to 480px (small phones)
+    .hero-section {
+        height: 60vh;
+    }
+    .hero-content {
+        h1 { font-size: 1.8em; }
+        p { font-size: 0.9em; }
+    }
+    .section-title {
+        font-size: 1.8em;
+    }
+    .intro-section .intro-text p {
+        font-size: 0.9em;
+    }
+}

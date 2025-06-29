@@ -1,0 +1,19 @@
+
+.container {
+    max-width: 1200px; // Shopify-like max width
+    margin: 0 auto;    // Center the container
+    padding: 0 $spacing-md; // Consistent horizontal padding
+}
+
+// Utility classes for alignment
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}

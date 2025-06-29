@@ -1,0 +1,62 @@
+
+.btn {
+    display: inline-flex; // For easy alignment of text and potential icons
+    align-items: center;
+    justify-content: center;
+    padding: $spacing-md $spacing-lg;
+    border-radius: $border-radius-sm;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color $transition-speed $transition-ease,
+                color $transition-speed $transition-ease,
+                border-color $transition-speed $transition-ease,
+                transform $transition-speed $transition-ease;
+    text-align: center; // Ensure text is centered
+    text-decoration: none; // Remove underline for links
+    white-space: nowrap; // Prevent text from wrapping
+    border: 2px solid transparent; // Default transparent border
+
+    &:hover {
+        transform: translateY(-2px); // Subtle lift on hover
+    }
+
+    span {
+        display: block; // Ensures span occupies its own space within flex container
+    }
+}
+
+.btn-primary {
+    background-color: $color-primary;
+    color: $color-white;
+    border-color: $color-primary;
+
+    &:hover {
+        background-color: darken($color-primary, 10%); // Darken on hover
+        border-color: darken($color-primary, 10%);
+    }
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: $color-primary;
+    border-color: $color-primary;
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+    }
+}
+
+// Button specifically for hero section (if different styling needed)
+.hero-btn {
+    font-size: 1.1em;
+    padding: $spacing-md $spacing-xl;
+    border-radius: $border-radius-md; // Slightly more rounded
+}
+
+// Button for intro section
+.intro-btn {
+    margin-top: $spacing-md;
+    @extend .btn-primary; // Reuse primary button styles
+}

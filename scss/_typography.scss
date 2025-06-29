@@ -1,0 +1,13 @@
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-base;
+    color: $color-accent; // Dark grey for headings by default
+    line-height: 1.2;
+    margin-bottom: $spacing-md;
+}
+
+h1 { font-size: $h1-font-size; }
+h2 { font-size: $h2-font-size; }
+h3 { font-size: $h3-font-size; }
+h4 { font-size: $h4-font-size; }
+// Add h5, h6 if needed

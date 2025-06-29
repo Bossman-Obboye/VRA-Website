@@ -1,0 +1,73 @@
+// scss/_csr.scss
+
+.csr-section {
+    padding: $spacing-xxl 0;
+    background-color: $color-light; // Or another differentiating background
+    text-align: center;
+
+    h2 {
+        font-size: $h2-font-size;
+        color: $color-primary;
+        margin-bottom: $spacing-md;
+    }
+
+    p {
+        font-size: 1.1em;
+        line-height: $line-height-base;
+        color: $color-accent;
+        margin-bottom: $spacing-xl;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+
+        a {
+            font-weight: 600;
+            color: $color-primary;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .csr-slideshow-container {
+        position: relative;
+        width: 100%;
+        max-width: 1000px; // Max width for the slideshow
+        margin: 0 auto;
+        overflow: hidden; // Hide overflow during transitions
+        border-radius: $border-radius-lg;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); // Add a shadow for depth
+        aspect-ratio: 16 / 9; // Maintain aspect ratio for the slideshow
+    }
+
+    .csr_slides {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0; // Hidden by default, JS will manage active slide
+        transition: opacity 1.5s ease-in-out; // Smooth fade transition
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; // Cover the entire space
+            display: block;
+        }
+
+        &.active { // Class to be added by JavaScript for the visible slide
+            opacity: 1;
+            z-index: 2;
+        }
+    }
+
+    // You might also want navigation dots/arrows for this slideshow,
+    // similar to the hero section, if manual control is desired.
+}

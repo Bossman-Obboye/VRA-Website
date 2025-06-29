@@ -1,0 +1,126 @@
+// scss/_header.scss
+
+.home-header {
+    position: absolute; // Positioned over the hero slideshow
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: $z-index-header; // Ensures it's above other content
+    padding: $spacing-md 0;
+    color: $color-white; // Text color for elements inside header over dark background
+
+    .nav-container {
+        @extend .container; // Use the global container
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap; // Allow wrapping on smaller screens
+    }
+
+    .logo-container {
+        a {
+            display: flex; // To vertically align image if needed
+            align-items: center;
+        }
+        img {
+            height: 60px; // Adjust logo size as needed
+            width: auto;
+            filter: brightness(0) invert(1); // Make logo white if it's dark and background is dark
+        }
+    }
+
+    .main-nav {
+        flex-grow: 1; // Allows navigation to take up available space
+        text-align: center; // Center nav items if there's space
+        padding: 0 $spacing-md; // Padding so it doesn't touch logo/search
+
+        .nav-items {
+            display: flex;
+            justify-content: center; // Center the actual nav links
+            gap: $spacing-xl; // Space between nav items
+
+            li {
+                a {
+                    color: $color-white; // White links on dark hero background
+                    font-weight: 500;
+                    font-size: 1.05em;
+                    position: relative; // For underline effect
+                    padding: $spacing-sm 0;
+
+                    &:hover {
+                        color: $color-secondary; // Secondary color on hover
+                    }
+
+                    // Optional: Underline effect on hover
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 0;
+                        height: 2px;
+                        background-color: $color-secondary;
+                        transition: width $transition-speed $transition-ease;
+                    }
+                    &:hover::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .nav-search {
+        .search-toggle {
+            background: none;
+            border: none;
+            color: $color-white;
+            font-size: 1.5em;
+            cursor: pointer;
+            padding: $spacing-sm;
+            transition: color $transition-speed $transition-ease;
+
+            &:hover {
+                color: $color-secondary;
+            }
+        }
+    }
+
+    // Mobile specific styles (will move to _responsive.scss later, but good to think about now)
+    // For now, these nav items are always visible.
+    // We'll need a mobile menu toggle (hamburger icon) and associated JS later.
+    // Example for very small screens or when menu is active:
+    /*
+    @media (max-width: 1024px) { // Adjust breakpoint as needed
+        .main-nav {
+            // Hide by default on mobile, display block when 'active' by JS
+            display: none;
+            width: 100%;
+            order: 3; // Pushes it below logo and search
+            background-color: rgba($color-primary, 0.9); // Semi-transparent background when open
+            padding: $spacing-md 0;
+
+            &.active {
+                display: block;
+            }
+
+            .nav-items {
+                flex-direction: column; // Stack items vertically
+                gap: $spacing-xs; // Reduce gap
+                align-items: center; // Center items
+                li {
+                    width: 100%;
+                    text-align: center;
+                    a {
+                        display: block;
+                        padding: $spacing-sm $spacing-md;
+                        &:hover {
+                            background-color: rgba($color-secondary, 0.2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    */
+}

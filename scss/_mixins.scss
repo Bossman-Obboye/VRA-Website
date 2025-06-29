@@ -1,0 +1,28 @@
+// scss/_mixins.scss
+
+// --- Breakpoints ---
+$breakpoint-xl: 1200px;
+$breakpoint-lg: 1024px;
+$breakpoint-md: 768px;
+$breakpoint-sm: 480px;
+
+// Mixin for responsive design
+@mixin media-breakpoint-up($breakpoint) {
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin media-breakpoint-down($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+// Example usage:
+// .element {
+//     font-size: 1em;
+//     @include media-breakpoint-down($breakpoint-md) {
+//         font-size: 0.9em;
+//     }
+// }

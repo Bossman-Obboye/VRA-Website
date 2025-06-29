@@ -1,0 +1,24 @@
+
+// 1. Configuration & Utilities
+@import 'variables';
+@import 'mixins';
+
+// 2. Base Styles
+@import 'base';
+@import 'typography';
+
+// 3. Layout Components
+@import 'layout';
+@import 'buttons';
+
+// 4. Section-Specific Styles (in order of appearance on homepage)
+@import 'header';
+@import 'hero';
+@import 'intro';
+@import 'offerings'; // Corresponds to your "What We Offer"
+@import 'csr';
+@import 'news';
+@import 'footer';
+
+// 5. Responsive Adjustments (typically at the end)
+@import 'responsive';

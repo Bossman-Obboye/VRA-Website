@@ -1,0 +1,68 @@
+// scss/_intro.scss
+
+.intro-section {
+    padding: $spacing-xxl 0; // Generous top and bottom padding
+    background-color: $color-light; // Light background to separate from hero
+    text-align: center; // Center text by default
+
+    .intro-container {
+        @extend .container; // Re-use global container styles
+        display: flex;
+        flex-direction: column;
+        align-items: center; // Center content horizontally
+    }
+
+    .intro-text {
+        max-width: 800px; // Limit width for readability
+        margin-bottom: $spacing-xl; // Space before "What We Offer" section
+
+        h2 {
+            font-size: $h2-font-size;
+            color: $color-primary;
+            margin-bottom: $spacing-md;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: $line-height-base;
+            color: $color-accent;
+            margin-bottom: $spacing-lg;
+
+            // Styling for inline links within paragraphs (if intended as such)
+            // If these are just for styling text, replace <a> with <span> in HTML
+            a {
+                font-weight: 600;
+                color: $color-primary;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .mission-box {
+        background-color: $color-white; // White background for the mission box
+        border-radius: $border-radius-md;
+        padding: $spacing-lg $spacing-xl;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); // Subtle shadow
+        margin-top: $spacing-lg; // Space above mission box
+        text-align: left; // Text inside mission box aligns left
+
+        h2 {
+            font-size: $h3-font-size;
+            color: $color-primary;
+            margin-bottom: $spacing-sm;
+        }
+
+        p {
+            font-size: 1em; // Standard paragraph size
+            color: $color-accent;
+            margin-bottom: $spacing-lg;
+        }
+
+        .intro-btn {
+            @extend .btn-primary; // Reuse primary button styling
+            // Adjust specific padding/margin if needed for this context
+        }
+    }
+}

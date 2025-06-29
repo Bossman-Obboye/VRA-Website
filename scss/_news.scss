@@ -1,0 +1,97 @@
+// scss/_news.scss
+
+.news-updates-section {
+    padding: $spacing-xxl 0; // Consistent vertical padding
+    background-color: $color-white; // White background for separation
+
+    .section-title {
+        font-size: $h2-font-size;
+        color: $color-primary;
+        text-align: center;
+        margin-bottom: $spacing-xl; // Generous space below title
+    }
+
+    .news-grid { // Renamed from .news-cards in your HTML to .news-grid for clarity
+        @extend .container; // Apply container styles
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Responsive grid
+        gap: $spacing-lg; // Space between news cards
+        margin-bottom: $spacing-lg; // Space above the "View All" button
+    }
+
+    .news-card {
+        background-color: $color-light; // Light background for cards
+        border-radius: $border-radius-md;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .news-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .news-card .card-image {
+        width: 100%;
+        height: 200px; // Consistent height for images
+        overflow: hidden; // Ensure image fits without distortion
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease; // Zoom effect on hover
+        }
+    }
+
+    .news-card:hover .card-image img {
+        transform: scale(1.05); // Subtle zoom on image hover
+    }
+
+    .news-card .card-content {
+        padding: $spacing-md;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .news-card .news-date { // Add this if you include a date span in HTML
+        font-size: 0.85em;
+        color: #666;
+        margin-bottom: $spacing-xs;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .news-card .card-title {
+        font-size: 1.3em;
+        line-height: 1.4;
+        margin-bottom: $spacing-sm;
+        color: $color-primary;
+        flex-grow: 1;
+    }
+
+    .news-card .card-subtitle {
+        font-size: 1em;
+        line-height: 1.5;
+        color: $color-accent;
+        margin-bottom: $spacing-md;
+    }
+
+    .news-card .read-more-link { // Add this if you include a read more link in HTML
+        color: $color-primary;
+        font-weight: 600;
+        display: inline-block;
+        transition: color $transition-speed ease;
+        align-self: flex-start;
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+
+    .news-updates-section > .text-center { // Target the wrapper div for "View All" button
+        margin-top: $spacing-xl; // Space above the button
+    }
+}
