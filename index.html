@@ -1,39 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VRA - Powering Ghana</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-  <header class="navbar">
-    <div class="container">
-      <h1 class="logo">VRA</h1>
-      <nav class="nav-links" id="nav-menu">
-        <a href="#">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#csr">CSR</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="burger" onclick="toggleMenu()">☰</div>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VRA - Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <section class="hero">
-    <div class="container">
-      <h2>Powering Ghana’s Future</h2>
-      <p>Hydro. Thermal. Renewables. Reliable Energy for All.</p>
-      <a href="#projects" class="cta-btn">Explore Projects</a>
-    </div>
-  </section>
+  <body>
+    <!-- HERO + BACKGROUND SLIDESHOW -->
+    <section class="hero-section">
+      <!-- SLIDESHOW FOR BACKGROUND-->
+      <div class="slideshow-container">
+        <div class="home_slides fade">
+          <img src="assets/images/home_slides/slide_one.png" alt="Slide 1" />
+        </div>
+        <div class="home_slides fade">
+          <img src="assets/images/home_slides/slide_two.png" alt="Slide 2" />
+        </div>
+        <div class="home_slides fade">
+          <img src="assets/images/home_slides/slide_three.png" alt="Slide 3" />
+        </div>
+        <div class="home_slides fade">
+          <img src="assets/images/home_slides/slide_four.jpg" alt="Slide 4" />
+        </div>
+        <div class="home_slides fade">
+          <img src="assets/images/home_slides/slide_five.jpg" alt="Slide 5" />
+        </div>
+      </div>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Volta River Authority. All rights reserved.</p>
-    </div>
-  </footer>
+      <!-- HEADER OVERLAY -->
+      <header class="home-header">
+        <div class="nav-container">
+          <!-- LOGO -->
+          <div class="logo-container">
+            <a href="#">
+              <img src="assets/images/logo/vra_logo.png.png" alt="VRA Logo" />
+            </a>
+          </div>
 
-  <script src="assets/js/main.js"></script>
-</body>
+          <!-- Main navigation -->
+          <nav class="main-nav">
+            <ul class="nav-items">
+              <li><a href="#">About</a></li>
+              <li><a href="#">What We Do</a></li>
+              <li><a href="#">Our Impacts</a></li>
+              <li><a href="#">Our Companies</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+
+          <!-- SEARCH BAR -->
+          <div class="nav-search">
+            <button class="search-toggle" aria-label="Search">🔍</button>
+          </div>
+        </div>
+      </header>
+
+      <!-- HERO CONTENT WITH CTA BUTTON OVERLAY -->
+      <div class="hero-content">
+        <div class="content_1">
+          <h1>Powering Ghana's Sustainable Future</h1>
+          <p>
+            Delivering reliable, clean energy solutions that drive
+            socio-economic development and enhance the quality of life across
+            Ghana and West Africa
+          </p>
+          <a href="#" class="btn hero-btn">
+            <span>Explore Our Impacts</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
