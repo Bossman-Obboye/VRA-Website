@@ -1,0 +1,37 @@
+
+/* RESET MARGINS, PADDINTS AND BORDERS */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* SET CONSISTENT HTML */
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+
+/* SET BODY BASELINE */
+body {
+    min-height: 100vh;
+    line-height: var(--line-height-base);
+    background-color: var(--light-color);
+    color: var(--dark-text-color);
+    text-rendering: optimizeLegibility;
+}
+
+
+/* CHANGE STYLE WHEN FOCUSED */
+a:focus, button:focus, input:focus {
+  outline: 2px dashed var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* SETTING DEFAULT STYLES */
+button, select, input, textarea {
+    font-family: inherit;
+    font-size: inherit;
+}

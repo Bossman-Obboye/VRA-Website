@@ -1,22 +1,23 @@
 :root {
   /* — COLORS — */
-  --color-primary: #0056b3;
-  --color-secondary: #007bff;
-  --color-accent: #343a40;
-  --color-light: #f8f9fa;
-  --color-white: #ffffff;
-  --color-text-dark: #212529;
-  --color-border: #dee2e6;
+  --primary-color: #0056b3;
+  --secondary-color: #007bff;
+  --accent-color: #343a40;
+  --light-color: #f8f9fa;
+  --white-color: #ffffff;
+  --dark-text-color: #212529;
+  --border-color: #dee2e6;
 
   /* — TYPOGRAPHY — */
-  --font-family-base: "Inter", sans-serif;
-  --font-size-base: 16px;
-  --line-height-base: 1.6;
+  --general-font-family: "Inter", sans-serif;
+  --general-font-size: 16px;
+  --general-line-height: 1.6;
 
   --h1-font-size: 56px;
   --h2-font-size: 40px;
   --h3-font-size: 28.8px;
   --h4-font-size: 22.4px;
+
 
   /* — SPACING — */
   --spacing-xs: 4px;

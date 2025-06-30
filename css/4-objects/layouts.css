@@ -1,0 +1,59 @@
+
+/* PAGE CONTAINER */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+}
+
+/* EDITING GRIDS */
+.grid {
+ display: grid;
+ grid-gap: var(--spacing-lg)
+}
+
+.grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* FLEX */
+.flex {
+  display: flex;
+}
+
+.flex--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex--space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* WRAPPERS */
+.wrapper {
+  padding: var(--spacing-lg) 0;
+}
+
+.wrapper--sm {
+  padding: var(--spacing-md) 0;
+}
+
+.wrapper--lg {
+  padding: var(--spacing-xl) 0;
+}
+
