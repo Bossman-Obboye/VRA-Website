@@ -24,14 +24,12 @@ body {
 }
 
 
-/* CHANGE STYLE WHEN FOCUSED */
-a:focus, button:focus, input:focus {
-  outline: 2px dashed var(--primary-color);
-  outline-offset: 2px;
-}
-
 /* SETTING DEFAULT STYLES */
 button, select, input, textarea {
     font-family: inherit;
     font-size: inherit;
+}
+
+ul, ol {
+    list-style: none;
 }

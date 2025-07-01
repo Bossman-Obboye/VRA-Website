@@ -17,6 +17,8 @@
   --h2-font-size: 40px;
   --h3-font-size: 28.8px;
   --h4-font-size: 22.4px;
+  --h5-font-size: 20.0px;
+  --h6-font-size: 18.0px;
 
 
   /* — SPACING — */
@@ -45,4 +47,5 @@
   /* — TRANSITIONS — */
   --transition-speed: 0.3s;
   --transition-ease: ease-in-out;
+  
 }
