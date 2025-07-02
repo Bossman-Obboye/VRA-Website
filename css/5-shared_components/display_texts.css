@@ -1,0 +1,11 @@
+.display_text_lg {
+    color: var(--primary-color);
+    font-size: 65px;
+    font-weight: 700;
+}
+
+.display_text_md {
+    color: white;
+    font-size: var(--h4-font-size);
+    font-weight: 500;
+}
