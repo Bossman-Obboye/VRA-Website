@@ -2,4 +2,4 @@
 @import "2-generic/general_style.css";
 @import "3-elements/core_elements.css";
 @import "4-objects/layouts.css";
-@import "5-components/shared_components.css";
+@import "5-shared_components/navbar.css";
