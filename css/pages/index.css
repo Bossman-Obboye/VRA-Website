@@ -1,0 +1,89 @@
+.intro-section {
+  position: relative;
+  margin-top: -15vh; /* Overlap hero by 15vh */
+  background: var(--bg-greylike-color);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  z-index: 20;
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.08);
+  padding-top: 40px;
+}
+
+.intro-container {
+  max-width: 1300px;
+}
+
+.intro-btn {
+  padding: 0px;
+  color: var(--btn-red-color);
+  display: block;
+  margin-bottom: 30px;
+}
+
+.home-profile-box {
+  width: 90%;
+  display: flex;
+  flex-direction: row; /* Ensures they are in a row by default */
+  gap: var(--spacing-md); /* Sets horizontal gap between items */
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.08);
+  flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+  margin: 2rem auto;
+}
+
+.btn-secondary {
+  border-color: var(--btn-red-color);
+  color: var(--btn-red-color);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  border-color: var(--btn-red-color);
+  color: var(--btn-red-color);
+  background-color: rgba(159, 16, 16, 0.295);
+}
+
+.vision-box {
+  border-radius: var(--border_radius-md);
+  flex: 1 1 0%;
+  text-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 2px solid var(--primary-color);
+  background: url("../../assets/images/bg/vision_box_bg.png") no-repeat center
+    center/cover;
+  /* background: linear-gradient(135deg, red, white, blue); */
+  padding: 1.5rem;
+  color: #000;
+}
+
+.mission-box {
+  flex: 1 1 0%;
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid red;
+  background: linear-gradient(135deg, red, white, blue);
+  padding: 1.5rem;
+  color: #000;
+  background: url("../../assets/images/bg/mission_box_bg.png") no-repeat center
+    center/cover;
+}
+
+.mission-box h4,
+.mission-box h3,
+.vision-box h4,
+.vision-box h3 {
+  color: white;
+}
+
+/* Responsive for screens 600px and below */
+@media screen and (max-width: 800px) {
+  .home-profile-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .vision-box,
+  .mission-box {
+    width: 100%;
+  }
+}

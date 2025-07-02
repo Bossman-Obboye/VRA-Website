@@ -47,7 +47,7 @@ a:hover, a:focus {
 
 
 /* IMAGES */
-img {
+img { 
     max-width: 100%;
     display: block;
 }
@@ -61,3 +61,4 @@ img {
 .text-right {
     text-align: right;
 }
+

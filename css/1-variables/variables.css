@@ -7,6 +7,8 @@
   --white-color: #ffffff;
   --dark-text-color: #212529;
   --border-color: #dee2e6;
+  --bg-greylike-color: #e2e2e2;
+  --btn-red-color: rgba(207, 0, 0, 0.984);
 
   /* — TYPOGRAPHY — */
   --general-font-family: "Inter", sans-serif;
@@ -17,7 +19,7 @@
   --h2-font-size: 40px;
   --h3-font-size: 28.8px;
   --h4-font-size: 22.4px;
-  --h5-font-size: 20.0px;
+  --h5-font-Esize: 20.0px;
   --h6-font-size: 18.0px;
 
 
