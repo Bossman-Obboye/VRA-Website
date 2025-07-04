@@ -36,7 +36,7 @@
   box-sizing: border-box; /* Include padding in element's total width and height */
   opacity: 0; /* Start hidden */
   transform: scale(1.05); /* Slightly zoomed in initially */
-  animation: fadeAnimation 18s infinite; /* Total duration: 3 slides * 6s each */
+  animation: fadeAnimation 24s infinite; /* Total duration: 3 slides * 6s each */
 }
 
 /* Delay for each slide */
@@ -44,10 +44,10 @@
   animation-delay: 0s;
 }
 .hero-slide.content_2 {
-  animation-delay: 5600ms; /* Starts after 6 seconds */
+  animation-delay: 8s; /* Starts after 6 seconds */
 }
 .hero-slide.content_3 {
-  animation-delay: 12s; /* Starts after 12 seconds */
+  animation-delay: 16s; /* Starts after 12 seconds */
 }
 
 /* Keyframes for the fade and slight zoom animation */
@@ -115,7 +115,7 @@
    margin-right: auto;
    padding-left: var(--spacing-md);
    padding-right: var(--spacing-md);
-   background: rgba(255, 253, 253, 0.118); /* Transparent white background */
+   background: rgba(255, 253, 253, 0.664); /* Transparent white background */
    border-radius: 8px;
 }
 
